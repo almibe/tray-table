@@ -1,0 +1,12 @@
+apply plugin: 'java'
+
+group 'org.libraryweasel'
+version '0.1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+}
