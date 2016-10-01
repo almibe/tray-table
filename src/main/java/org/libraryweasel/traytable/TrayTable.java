@@ -28,4 +28,8 @@ public class TrayTable {
     public TrayTable(String ...columnNames) {
 
     }
+
+    public void setValues(List<List<String>> values) {
+
+    }
 }

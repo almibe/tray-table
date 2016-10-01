@@ -18,8 +18,21 @@
  */
 package org.libraryweasel.traytable.demo;
 
-public class Demo {
-    public static void main(String[] args) {
+import javafx.application.Application
+import javafx.scene.Scene
+import javafx.stage.Stage
+import org.libraryweasel.traytable.TrayTable
 
+public class Demo extends Application {
+    public static void main(String[] args) { launch(Demo.class) }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        TrayTable trayTable = new TrayTable("Test1", "Test2")
+
+        Scene scene = new Scene(trayTable.tableView, 1400, 800)
+        primaryStage.title = "Tray Table Demo"
+        primaryStage.scene = scene
+        primaryStage.show()
     }
 }

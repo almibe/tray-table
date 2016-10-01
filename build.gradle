@@ -1,4 +1,4 @@
-apply plugin: 'java'
+apply plugin: 'groovy'
 
 group 'org.libraryweasel'
 version '0.1.0-SNAPSHOT'
@@ -9,4 +9,5 @@ repositories {
 }
 
 dependencies {
+    compileTest 'org.codehaus.groovy:groovy:2.4.7'
 }
