@@ -28,7 +28,9 @@ public class Demo extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        TrayTable trayTable = new TrayTable("Test1", "Test2")
+        TrayTable trayTable = new TrayTable("Col Test 1", "Col Test 2")
+
+        trayTable.setValues([["val 1", "val 2"], ["val a", "val b"]])
 
         Scene scene = new Scene(trayTable.tableView, 1400, 800)
         primaryStage.title = "Tray Table Demo"

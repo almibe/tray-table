@@ -1,3 +1,4 @@
+apply plugin: 'maven'
 apply plugin: 'groovy'
 
 group 'org.libraryweasel'
@@ -9,5 +10,5 @@ repositories {
 }
 
 dependencies {
-    compileTest 'org.codehaus.groovy:groovy:2.4.7'
+    testCompile 'org.codehaus.groovy:groovy:2.4.7'
 }
