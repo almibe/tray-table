@@ -28,10 +28,11 @@ public class Demo extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        def table = TrayTable.create(["Col Test 1", "Col Test 2"],
+        def table = TrayTable.create(["Col Test 1", "Col Test 2", "Half Empty Column", "Empty Column"],
             [["a", "b"],
             ["c", "d"],
-            ["e", "f"]]
+            ["e", "f", "g"],
+            ["h", "i", "j"]]
         )
 
         Scene scene = new Scene(table, 1400, 800)
