@@ -22,17 +22,14 @@ import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
-import java.util.Iterator;
 import java.util.List;
 
 public final class TrayTable {
     public static TableView<List<String>> create(List<String> headers, List<List<String>> content) {
         TableView<List<String>> table = new TableView<>();
-        Iterator<String> iterator = headers.iterator();
-        int index = 0;
 
-        while (iterator.hasNext()) {
-            String columnTitle = iterator.next();
+        for (int index = 0; index < headers.size(); index++) {
+            String columnTitle = headers.get(index);
             TableColumn<List<String>, String> column = new TableColumn<>(columnTitle);
             table.getColumns().add(column);
             final int current = index;
@@ -43,7 +40,6 @@ public final class TrayTable {
                     return new ReadOnlyStringWrapper("");
                 }
             });
-            index++;
         }
         table.getItems().addAll(content);
         return table;
