@@ -22,14 +22,10 @@ import javafx.scene.control.TableView;
 
 import java.util.List;
 
-public class TrayTable {
-    public final TableView<List<String>> tableView = new TableView<>();
+public final class TrayTable {
+    public static TableView<String> create(List<String> headers, List<List<String>> content) {
+        TableView<String> table = new TableView<>();
 
-    public TrayTable(String ...columnNames) {
-
-    }
-
-    public void setValues(List<List<String>> values) {
-
+        return table;
     }
 }
