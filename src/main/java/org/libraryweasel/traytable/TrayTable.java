@@ -18,13 +18,25 @@
  */
 package org.libraryweasel.traytable;
 
+import javafx.beans.property.ReadOnlyStringWrapper;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
 import java.util.List;
 
 public final class TrayTable {
-    public static TableView<String> create(List<String> headers, List<List<String>> content) {
-        TableView<String> table = new TableView<>();
+    public static TableView<List<String>> create(List<String> headers, List<List<String>> content) {
+        TableView<List<String>> table = new TableView<>();
+
+        headers.forEach(columnTitle -> {
+            int index = headers.indexOf(columnTitle);
+            TableColumn<List<String>, String> column = new TableColumn<>(columnTitle);
+            table.getColumns().add(column);
+
+            column.setCellValueFactory(row -> new ReadOnlyStringWrapper(row.getValue().get(index)));
+        });
+
+        table.getItems().addAll(content);
 
         return table;
     }
