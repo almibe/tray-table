@@ -1,7 +1,6 @@
 language: groovy
 jdk:
   - oraclejdk8
-addons:
-  apt:
-    packages:
-      - oracle-java8-installer
+env:
+  global:
+    - JAVA_HOME=/usr/lib/jvm/java-8-oracle
