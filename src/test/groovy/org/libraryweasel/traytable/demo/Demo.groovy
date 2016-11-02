@@ -29,7 +29,7 @@ public class Demo extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         def table = TrayTable.create(["Col Test 1", "Col Test 2", "Half Empty Column", "Empty Column"],
-            [100,200,500,600],
+            [100,200,500],
             [["a", "b"],
             ["c", "d"],
             ["e", "f", "g"],
