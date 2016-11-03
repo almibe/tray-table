@@ -1,5 +1,5 @@
-apply plugin: 'java'
 apply plugin: 'maven'
+apply plugin: 'groovy'
 
 group 'org.libraryweasel'
 version '0.1.0-SNAPSHOT'
@@ -7,4 +7,8 @@ version '0.1.0-SNAPSHOT'
 repositories {
     mavenCentral()
     mavenLocal()
+}
+
+dependencies {
+    testCompile 'org.codehaus.groovy:groovy:2.4.7'
 }
